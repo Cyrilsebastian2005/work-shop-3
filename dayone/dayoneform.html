@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initia
+l-scale=1.0">
+ <title>XYZ College</title>
+ <link rel="stylesheet" href="dayonecss.css">
+</head>
+<body>
+ <header class="flex-container">
+ <h1>XYZ College</h1>
+ <nav>
+ <ul>
+ <li><a href="#about">About Us</a></li>
+ <li><a href="#courses">Courses</a></li>
+ <li><a href="#contact">Contact</a></li>
+ </ul>
+ </nav>
+ </header>
+ <section id="about" class="fade">
+ <h2>About Us</h2>
+ <p>XYZ College is a premier institution...</p>
+ </section>
+ <section id="courses" class="grid-container">
+ <div class="course">
+ <h3>Bachelor of Science</h3>
+ </div>
+ <div class="course">
+ <h3>Bachelor of Arts</h3>
+ </div>
+ <div class="course">
+ <h3>Bachelor of Technology</h3>
+
+ </div>
+ </section>
+ <section id="contact">
+ <h2>Contact Us</h2>
+ <form onsubmit="return validateForm()">
+ <label for="name">Name:</label>
+ <input type="text" id="name" placeholder="Your Na
+me">
+ <br>
+ <label for="email">Email:</label>
+ <input type="email" id="email" placeholder="Your
+Email">
+ <br>
+ <button type="submit">Submit</button>
+ </form>
+ </section>
+ <footer>
+ <p>&copy; 2024 XYZ College</p>
+ </footer>
+ <script src="dayonescript.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+simple login and registration ui 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      list-style: none;
+      text-decoration: none;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+_
+    body {
+      background: #1bb1ec;
+    }
+
+    .wrapper {
+      max-width: 400px;
+      width: 100%;
+      height: 440px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #dde1e7;
+      box-shadow: -3px -3px 7px rgba(68, 75, 87, 0.356),
+        2px 2px 5px rgba(68, 75, 87, 0.356);
+    }
+
+    .container {
+      padding: 35px 40px;
+    }
+
+    .tabs ul {
+      width: 100%;
+      margin-bottom: 30px;
+      border: 2px solid #1bb1ec;
+      display: flex;
+    }
+
+    .tabs ul li {
+      width: 50%;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 14px;
+      color: #fefffe;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: #1bb1ec;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.5s ease;
+    }
+
+    .tabs ul li.active {
+      background: #e3e4e6;
+      color: rgb(0, 0, 0);
+    }
+
+    .input_field {
+      margin-bottom: 25px;
+      margin-top: 28px;
+    }
+
+    .input_field .input {
+      width: 100%;
+      border: none;
+      background: #dde9ecb7;
+      color: black;
+      font-family: sans-serif;
+      border: 2px solid rgba(13, 162, 231, 0.596);
+      font-size: 14px;
+      padding: 17px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      background: #27a6f0;
+      padding: 12px;
+      text-align: center;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #1b8cce;
+    }
+
+    .btn a {
+      color: rgb(255, 255, 255);
+      display: block;
+      font-size: 16px;
+      font-family: sans-serif;
+    }
+
+    .icon-button {
+      margin-top: 45px;
+    }
+
+    .icon-button span {
+      margin-left: 15px;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 20px;
+      padding-bottom: 7px;
+      border-radius: 5px;
+      line-height: 30px;
+      background: #b8bec7;
+    }
+
+    .icon-button span.facebook {
+      background: #3498db;
+      color: #fbfdff;
+    }
+
+    .icon-button span.google {
+      background: #db7f34;
+      color: #ffffff;
+    }
+
+    .icon-button span.facebook:hover {
+      background: #2172a8;
+    }
+
+    .icon-button span.google:hover {
+      background: #be6c29;
+    }
+
+    .icon-button span i {
+      font-size: 25px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="tabs">
+        <ul>
+          <li class="sign_in_li" onclick="showSignIn()">Sign in</li>
+          <li class="sign_up_li" onclick="showSignUp()">Sign up</li>
+        </ul>
+      </div>
+
+      <div class="sign_in" id="sign_in">
+        <div class="icon-button">
+          <span class="facebook"><i class="fa fa-facebook"></i></span>
+          <span class="google"><i class="fa fa-google"></i></span>
+        </div>
+        <div class="input_field">
+          <input type="text" placeholder="E-mail" class="input">
+        </div>
+        <div class="input_field">
+          <input type="password" placeholder="Password" class="input">
+        </div>
+        <div class="btn"><a href="#">Sign in</a></div>
+      </div>
+
+      <div class="sign_up" id="sign_up" style="display: none;">
+        <div class="input_field">
+          <input type="text" placeholder="Username" class="input">
+        </div>
+        <div class="input_field">
+          <input type="text" placeholder="E-mail" class="input">
+        </div>
+        <div class="input_field">
+          <input type="password" placeholder="Password" class="input">
+        </div>
+        <div class="btn"><a href="#">Sign up</a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Function to show the Sign In form and hide the Sign Up form
+    function showSignIn() {
+      document.getElementById('sign_in').style.display = 'block';
+      document.getElementById('sign_up').style.display = 'none';
+      document.querySelector('.sign_in_li').classList.add('active');
+      document.querySelector('.sign_up_li').classList.remove('active');
+    }
+
+    // Function to show the Sign Up form and hide the Sign In form
+    function showSignUp() {
+      document.getElementById('sign_in').style.display = 'none';
+      document.getElementById('sign_up').style.display = 'block';
+      document.querySelector('.sign_in_li').classList.remove('active');
+      document.querySelector('.sign_up_li').classList.add('active');
+    }
+  </script>
+</body>
+</html>
